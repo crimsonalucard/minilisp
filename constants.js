@@ -1,7 +1,7 @@
 var _ = require('lodash');
 
 module.exports = {
-  openParens: '('.
+  openParens: '(',
   closeParens: ')',
   plus: '+',
   minus: '-',
@@ -14,5 +14,8 @@ module.exports = {
     '-': 'core.subtract',
     '*': 'core.multiply',
     '/': 'core.divide'
-  }
+  },
+  isALetter: _.partial(_.contains,'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+  isANumber: _.partial(_.contains,'0123456789'),
+  isAToken: _.partial(_.contains, '()*+-/')
 }
