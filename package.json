@@ -1,0 +1,14 @@
+{
+  "name": "make_a_mini_lisp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "minilisp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Yeh <heynairb@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
