@@ -1,29 +1,31 @@
+"use strict";
+
 var constants = require('./constants.js');
 
 var TokenStream = function (text) {
     this.text = text;
     this.index = 0;
     this.done = false;
-}
+};
 
 TokenStream.prototype.advance = function () {
-    this.index++;
+    this.index += 1;
     if (this.index === this.text.length) {
         this.done = true;
     }
-}
+};
 
 TokenStream.prototype.currentToken = function () {
     return this.text[this.index];
-}
+};
 
 TokenStream.prototype.isDone = function () {
     return this.done;
-}
+};
 
 TokenStream.prototype.nextToken = function () {
     return this.text[this.index + 1];
-}
+};
 
 function tokenizer(text) {
     var result = [];
@@ -62,5 +64,3 @@ function tokenizer(text) {
     }
     return result;
 }
-
-console.log(tokenizer('(+ 1 3)(func (+ 2 3))("hello")'));
