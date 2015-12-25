@@ -1,5 +1,3 @@
-"use strict";
-
 var constants = require('./constants.js');
 
 var TokenStream = function (text) {
@@ -64,3 +62,7 @@ function tokenizer(text) {
     }
     return result;
 }
+
+module.exports = {
+    tokenizer: tokenizer
+};
