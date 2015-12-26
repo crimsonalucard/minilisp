@@ -18,4 +18,4 @@ module.exports = {
   isALetter: _.partial(_.contains,'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
   isANumber: _.partial(_.contains,'0123456789'),
   isAToken: _.partial(_.contains, '()*+-/')
-}
+};
